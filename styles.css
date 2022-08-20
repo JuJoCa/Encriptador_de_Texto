@@ -1,0 +1,335 @@
+body{
+    font-family: 'Inter';
+    font-style: normal;
+    background: #F3F5FC;
+    font-size: 16px;
+}
+
+main{
+    width:90%;
+    max-width: 90em;
+    margin: 40px auto;
+    display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas:
+		'parte1 parte1 parte1 parte1 parte3 parte3'
+        'parte1 parte1 parte1 parte1 parte3 parte3'
+        'parte2 parte2 parte2 parte2 parte3 parte3';
+}
+
+.parte1{
+    grid-area: parte1;
+    
+}
+
+.parte1 .contenedorTexto{ 
+    padding: 11.26% 5% 5% 15%; 
+}
+
+.parte1 .contenedorLogo{
+    display: inline-block;
+}
+
+.parte1 .contenedorTexto .textoMostrado{
+    width: 100%;
+    height: 37.5rem;
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 150%;
+    color: #0A3871;
+    background: #F3F5FC;
+    border: none;
+    resize: none;
+}
+
+.parte1 .contenedorTexto .textoMostrado:focus{
+    border: none;
+    outline: none;
+}
+
+.parte1 .contenedorTexto .textoMostrado::placeholder{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 150%;
+    color: #0A3871;
+}
+
+.parte2{
+    grid-area: parte2;
+    padding: 0px 0px 3.5% 15%;
+}
+
+.parte2 .advertencia{
+    font-weight: 400;
+    font-size: 1.125em;
+    line-height: 150%;
+    color: #495057;
+}
+
+.parte2 .contenedorBoton{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.5em;
+    padding-top: 16px;
+}
+
+.parte2 .contenedorBoton .btnEncriptar{
+    padding: 1.5rem;
+    gap: 0.5rem;
+    width: 20.5rem;
+    height: 4.1875rem;
+    background: #0A3871;
+    border-radius: 24px;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.19em;
+    text-align: center;
+    color: #FFFFFF;
+    cursor:pointer;
+}
+
+.parte2 .contenedorBoton .btnDesencriptar{
+    box-sizing: border-box;
+    padding: 1.5rem;
+    gap: 0.5rem;
+    width: 20.5rem;
+    height: 4.1875rem;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.19em;
+    text-align: center;
+    color: #0A3871;
+    cursor:pointer;
+}
+
+.parte3{
+    grid-area: parte3;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+.parte3 .contenedorImagen{
+    padding-top: 50%;
+}
+
+.parte3 .contenedorTextonoencontrado{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+    padding-top: 2em;
+}
+
+.parte3 .mensaje1{
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 120%;
+
+    text-align: center;
+    color: #343A40;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.parte3 .mensaje2{
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 150%;
+
+    text-align: center;
+    color: #495057;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.parte3 .rectangulo{
+    width: 85%;
+    height: 85%;
+    padding: 32px 32px 100px 32px;
+    text-align: center;
+}
+
+.parte3 .rectangulo .textoResultado{
+    width: 100%;
+    height: 100%;
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 150%;
+    color: #495057;
+    border: none;
+    resize: none;
+}
+
+.parte3 .rectangulo .textoResultado:focus{
+    border: none;
+    outline: none;
+}
+
+.parte3 .rectangulo .btnCopiar{
+    padding: 1.5rem;
+    gap: 0.5rem;
+    width: 100%;
+    height: 4.1875rem;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.19em;
+    text-align: center;
+    color: #0A3871;
+    cursor:pointer;
+}
+
+/* Resolucion para tablets */
+
+@media  (max-width:770px){
+    main{
+        grid-template-rows: 35%;
+        grid-template-areas:
+            'parte1 parte1 parte1 parte1 parte1 parte1'
+            'parte2 parte2 parte2 parte2 parte2 parte2'
+            'parte3 parte3 parte3 parte3 parte3 parte3';
+    }
+    
+    .parte1 .contenedorTexto{
+        padding: 3% 5% 3% 15%;
+    }
+
+    .parte1 .contenedorTexto .textoMostrado{
+        height: 28rem;
+    }
+
+    .parte2{
+        padding: 10px 100px;
+    }
+
+    .parte3 {
+        height: 80%;
+    }
+
+    .parte3 .rectangulo{
+        text-align: center;
+        margin: auto;
+        padding-bottom: 10%;
+    }
+
+    .parte3 .rectangulo .contenedorImagen{
+        display: inline-block;
+        padding-top: 0%;
+        
+    }
+
+    .parte3 .rectangulo .contenedorTextonoencontrado{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3em;
+        padding-top: 1em;
+    }
+
+}
+
+/* Resolucion para celulares */
+
+@media (max-width:380px) {
+    main{
+        grid-template-rows: 50%;
+    }
+
+    .logoAlura{
+        width: 60px;
+        height: 24px;
+    }
+   
+    .parte1 .contenedorTexto .textoMostrado{
+        font-size: 1em;
+    }
+    
+    .parte1 .contenedorTexto .textoMostrado::placeholder{
+        font-size: 1em;
+    }
+
+    .parte1 .contenedorTexto .textoMostrado{
+        height: 11.8em;
+    }
+
+    .parte2{
+        padding: 2px 10px 2px 10px;
+    }
+
+    .parte2 .advertencia{
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .parte2 .contenedorBoton{
+        text-align: center;
+    }
+
+    .parte2 .contenedorBoton .btnEncriptar{
+        padding: 0.8rem;
+        font-size: 0.8em;
+        width: 15rem;
+        height: 3rem;
+    }
+
+    .parte2 .contenedorBoton .btnDesencriptar{
+        padding: 0.8rem;
+        font-size: 0.8em;
+        width: 15rem;
+        height: 3rem;
+    }
+
+    .parte3 {
+        height: 100%;
+    }
+
+    .parte3 .rectangulo .contenedorImagen{
+        display: none;
+    }
+
+    .parte3 .rectangulo .contenedorTextonoencontrado{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3em;
+        padding-top: 1em;
+        font-size: 1em;
+    }
+
+    .parte3 .rectangulo .contenedorTextonoencontrado .mensaje1{
+        font-size: 1em;
+    }
+
+    .parte3 .rectangulo .contenedorTextonoencontrado .mensaje2{
+        font-size: 1em;
+    }
+
+    .parte3 .rectangulo .textoResultado{
+        font-size: 1em;
+        background: none;
+    }
+
+    .parte3 .rectangulo .btnCopiar{
+        padding: 0.8em;
+        font-size: 0.8em;
+        width: 15em;
+        height: 3em;
+        padding-bottom: 20px;
+    }
+}

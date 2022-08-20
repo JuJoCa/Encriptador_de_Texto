@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador/Desencriptador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+</head>
+<body>
+    <main>
+        <div class="parte1">
+            <div class="contenedorLogo">
+                <img src="img/Logo.png" alt="Logo de Alura" class="logoAlura">
+            </div>
+            <div class="contenedorTexto">
+                <textarea id="textoMostrado" class="textoMostrado" placeholder="Ingrese el texto aqui"></textarea>
+            </div>
+        </div>
+
+        <div class="parte2">
+                <h2 class="advertencia"><i class="fa-solid fa-circle-exclamation"></i>&nbsp;&nbsp;Solo letras minúsculas y sin acentos</h2>
+            <div class="contenedorBoton">
+                <button id="btnEncriptar" class="btnEncriptar" onclick="mostrartxtEncriptado()">Encriptar</button>
+                <button id="btnDesencriptar" class="btnDesencriptar" onclick="mostrartxtDesencriptado()">Desencriptar</button>
+            </div>
+        </div>
+
+        <div class="parte3">
+            <div class="rectangulo" id="idRectangulo">
+                <div class="contenedorImagen" id="contenedorImagen">
+                    <img src="img/Muñeco.svg" alt="ilustracion muñeco" class="muneco">
+                </div>
+                <div class="contenedorTextonoencontrado" id="contenedorTextonoencontrado">
+                    <h1 class="mensaje1">Ningún mensaje fue encontrado</h1>
+                    <h2 class="mensaje2">Ingresa el texto que desees encriptar o desencriptar</h2>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <script src="encriptar.js"></script> 
+</body>
+</html>
